@@ -13,8 +13,10 @@ export const GlobalProvider =({children}) => {
 
  function deleteTransaction(id) {
      dispatch({ 
+       
          type: 'DELETE_TRANSACTION',
          payload: id
+
      });
  }
 
@@ -37,5 +39,5 @@ addTransaction
         {children}
 </GlobalContext.Provider>
 
-)
+);
 }

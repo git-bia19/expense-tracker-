@@ -5,10 +5,10 @@ import { GlobalContext } from "../context/globalState";
 export const AddTransaction = () =>{
     const [description,setDescription] =useState('');
     const [TransactionAmount,setTransactionAmount]= useState(0);
-
     const { addTransaction} =useContext(GlobalContext);
 
-    const onSubmit = e => {
+    
+    const onSubmit = (e) => {
         e.preventDefault();
     
     const newTransaction ={
@@ -33,16 +33,18 @@ return (
                  placeholder="Detail of Transaction"
                  value={description}
                  onChange={(e) => setDescription(e.target.value) }
+                 required ="required"
                 />
                 </div>
              <div className ="form-control">
-               <label htmlFor ="transactionAmount">Amount <br></br> (negatve -expense, positive income</label>
+               <label htmlFor ="TransactionAmount">Amount <br></br> (negatve -expense, positive income</label>
                <input
                type="number"
                id="transactionamount"
                placeholder="Enter transaction amount"
                value={TransactionAmount}
                onChange={(e) => setTransactionAmount(e.target.value)}
+               required ="required"
                />
              </div>
              <button className="btn">Add Transaction</button>

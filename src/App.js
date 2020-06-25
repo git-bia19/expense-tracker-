@@ -6,7 +6,7 @@ import {Balance} from './components/balance';
 import {AccountSummary} from './components/AccountSummary';
 import {TransactionHistory} from './components/TransactionHistory';
 import { AddTransaction } from './components/AddTransaction';
-import { Transaction } from './components/Transaction';
+
 
 import { GlobalProvider} from './context/globalState';
  
@@ -28,9 +28,7 @@ function App() {
     <div>
       <AddTransaction></AddTransaction>
     </div>
-    <div>
-      <Transaction></Transaction>
-    </div>
+   
 </GlobalProvider>
   );
 }

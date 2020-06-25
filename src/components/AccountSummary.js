@@ -7,11 +7,11 @@ export const AccountSummary = () => {
         const amounts = transactions.map(transaction => transaction.TransactionAmount);
 
         const income = amounts
-          .filter(item => item > 0)
+          .filter(item=> item> 0)
           .reduce((acc, item) => (acc += item), 0)
-          .toFixed(2);
+          .toFixed(2); 
       
-        const expense = (
+        const expense = Math.abs(
           amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
           -1
         ).toFixed(2);
